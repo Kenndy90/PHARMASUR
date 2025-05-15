@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../STYLES/style.css" />
+    <link rel="stylesheet" href="../fontawesome-free-6.7.2-web/css/all.css" />
+  </head>
+  <body class="rdv-body">
+    <header class="headerRDV">
+      <a href="medicament.html"
+        ><i class="fas fa-arrow-left"></i
+      ></a>
+      <h1>Votre panier d'achat</h1>
+      <i class="fas fa-trash viderpanier"></i>
+    </header>
+    <main class="panieritems">
+      <div class="medicamentchoisi">
+        <div class="medicamentchoisi-info">
+          <h2 class="medicamentchoisi-name">Sivoderm</h2>
+          <div class="medicamentchoisi-prix">1500 FCFA</div>
+          <p class="supprimer"><i class="fas fa-trash"></i>Supprimer</p>
+        </div>
+        <div class="quantite-control">
+          <button>-</button>
+          <span class="quantite">1</span>
+          <button>+</button>
+        </div>
+      </div>
+
+      <div class="medicamentchoisi">
+        <div class="medicamentchoisi-info">
+          <h2 class="medicamentchoisi-name">Efferagan</h2>
+          <div class="medicamentchoisi-prix">2500 FCFA</div>
+          <p class="supprimer"><i class="fas fa-trash"></i>Supprimer</p>
+        </div>
+        <div class="quantite-control">
+          <button>-</button>
+          <span class="quantite">1</span>
+          <button>+</button>
+        </div>
+      </div>
+
+      <div class="total">
+        <strong>Total :
+        <span id="total">4000</span>
+        <span>FCFA</span>
+      </strong>
+      <button class="commandebutton">Commander maintenant</button>
+      </div>
+    </main>
+    <section class="confirmationAchat">
+      <form action="" class="commandeform">
+        <h2 class="commandetitle">Informatios de livraison</h2>
+        <input type="text" placeholder="Nom complet">
+        <input type="text" placeholder="Votre ville ex: Abidjan">
+        <input type="text" placeholder="votre commune ex: Yopougon">
+        <input type="text" placeholder="votre quartier ex: siporex...">
+        <input type="number" placeholder="Entrer votre numero de téléphone">
+       <select name="paiement" id="paiement">
+        <option value="selectionner"selected>selectionner</option>
+        <option value="mobile money">MTN money</option>
+        <option value="wave">Wave</option>
+        <option value="carte bancaire">Orange money</option>
+        <option value="carte bancaire">Moov money</option>
+        <option value="carte bancaire">Carte bancaire</option>
+       </select>
+       <button class="buttonValidateur">Valider la commande</button>
+      </form>
+    </section>
+    <script src="/JAVASCRIPTS/dom.js"></script>
+  </body>
+</html>
