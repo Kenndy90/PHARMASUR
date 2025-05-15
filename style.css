@@ -1,0 +1,4535 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../FONTS/fonts/Roboto/static/Roboto-Bold.ttf);
+  src: url(../FONTS/fonts/Roboto/static/Roboto-Light.ttf);
+  src: url(../FONTS/fonts/Roboto/static/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(../FONTS/fonts/Poppins/Poppins-Light.ttf);
+  src: url(../FONTS/fonts/Poppins/Poppins-Bold.ttf);
+  src: url(../FONTS/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: var(--bg-color);
+}
+body {
+  font-family: "Roboto";
+}
+
+:root {
+  --bg-color: rgb(11, 7, 68);
+  --main-color: #ffffff;
+  --second-color: rgb(9, 199, 212);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ***************VERSION MOBILES**************** */
+
+/* ***************PAGE D'ACCUEIL******************** */
+/* *************BARRE DE NAVIGATION****************** */
+header {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  z-index: 9999;
+  padding-bottom: 1px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  padding-inline: 0.5rem;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 0.3rem !important;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  width: 75%;
+  align-items: center;
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.iconbar {
+  width: 2.5rem;
+  text-align: center;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid var(--bg-color);
+  margin-right: 2rem;
+  border-radius: 0.3rem;
+}
+.menu-logo {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 4rem;
+  position: absolute;
+  right: 2rem;
+  background-color: var(--main-color) !important;
+}
+
+.logo-name {
+  font-size: 1rem;
+  color: var(--bg-color) !important;
+  font-weight: bold;
+  margin-block: 0;
+  margin-inline: 0.3rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.profil-panier {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+  margin-right: 0.5rem;
+  background-color: #f0f0f0;
+  width: 20%;
+}
+
+.user-icon,
+.panier-div {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--bg-color);
+}
+
+.panier-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #5a4848fa;
+}
+
+.panier-div i {
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--bg-color) !important ;
+  transition: 0.3s ease !important;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  color: var(--second-color) !important;
+  scale: 1.09;
+}
+
+.nav-item .active {
+  color: var(--second-color) !important ;
+}
+
+/* *********************NAVBAR VERSION MOBILE************** */
+
+#closerayon {
+  font-size: 1.5rem;
+  margin-inline: 0.5rem;
+}
+.rayondemedicament {
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: var(--main-color);
+  border: 0.1px solid var(--bg-color);
+  width: 77%;
+  overflow-y: auto;
+  display: none;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.rayonitems {
+  width: 100%;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  overflow-y: auto;
+}
+.rayontitle {
+  color: var(--bg-color);
+  display: flex;
+  width: 100%;
+  font-size: 1rem;
+  align-items: center;
+  padding: 2rem 1rem 1rem 0;
+  position: sticky;
+  top: 0;
+}
+
+.rayonlinks {
+  display: flex;
+  font-size: 1.2rem;
+  color: var(--main-color);
+  align-items: baseline;
+  gap: 1rem;
+  margin: 1rem 0.3rem;
+  padding-left: 1rem;
+  color: var(--bg-color);
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.sidebar {
+  overflow-y: auto;
+  z-index: 9999999999;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  width: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--bg-color);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.sidebarspace {
+  z-index: 9999;
+  overflow-y: auto;
+  position: absolute;
+  min-height: 110vh;
+  width: 90%;
+  padding-left: 1rem;
+  margin-inline: 8% 2%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-left: 2px solid var(--second-color);
+  box-shadow: 0 0 20px var(--second-color);
+  border-radius: 10px 0 0 10px;
+  z-index: 999;
+}
+
+.sidebarspace h2 {
+  display: flex;
+  width: 100%;
+  font-size: 1.75rem;
+  color: var(--main-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+}
+
+.nontrouve {
+  margin-top: 1rem;
+  text-align: center;
+  display: none;
+  font-size: 1.1rem;
+  color: red;
+}
+
+#sideclose {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  margin-right: 0.9rem;
+}
+
+.siditems1,
+.siditems2 {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding-left: 0.2rem;
+}
+
+.siditems2 {
+  position: absolute;
+  bottom: 4rem;
+}
+.sidelinks {
+  display: flex;
+  font-size: 1.2rem;
+  color: var(--main-color);
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0.3rem;
+}
+.sidelinks i {
+  color: var(--second-color);
+  font-size: 1rem;
+  width: 6%;
+}
+
+.sidelinks span {
+  font-family: "Poppins", sans-serif;
+  color: var(--main-color);
+  padding: 0 5px;
+  font-size: 1rem;
+}
+
+.ordilinks {
+  height: auto;
+  width: 15%;
+  background-color: var(--main-color);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 3rem;
+  right: 10rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.ordilinks .navlinks {
+  margin-bottom: 0.5rem;
+  padding-block: 0.2rem;
+}
+
+.ordilinks .navlinks:hover {
+  border: none;
+  transition: 0.5s;
+  border-left: 4px solid var(--second-color);
+}
+
+/* **************CORPS DE PAGE************** */
+
+.principale {
+  width: 100%;
+  height: auto;
+  padding-top: 3.5rem;
+}
+
+.banniere {
+  width: 100%;
+  height: 52vh;
+  display: flex;
+  flex-direction: row;
+  padding-inline: 1.2rem;
+  padding-top: 3.5rem;
+  background: url(../IMAGES/opi8.jpg) center/cover;
+}
+.banniereitems {
+  width: 100%;
+  height: auto;
+}
+
+.annonce {
+  width: 95%;
+  height: 60%;
+  border: 1px solid var(--second-color);
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item{
+  height: 100%;
+}
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+#btnbann {
+  margin-left: 1.5625rem;
+}
+.banniere-btn {
+  height: 3rem;
+  width: 40%;
+  font-size: 1rem;
+  color: var(--second-color);
+  background: var(--bg-color);
+  border: 1px solid var(--second-color);
+  border-radius: 7px;
+  box-shadow: 0 0 1rem var(--second-color);
+  margin: 25px 10px 10px 10px;
+}
+
+.pharmavirtuelle {
+  display: none;
+}
+
+.service {
+  height: auto;
+  width: 100%;
+  background: var(--main-color);
+  padding: 1.875rem 0 1.5rem 0;
+}
+
+.service h2 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.servicespace {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.servicesitems {
+  height: auto;
+  width: 45%;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+.servimage {
+  height: 8rem;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 7px;
+}
+
+.pharmacie {
+  background: url(../IMAGES/medica.jpg) center/cover no-repeat;
+}
+
+.medecins {
+  background: url(../IMAGES/consutation.png) center/cover;
+}
+
+.urgence {
+  background: url(../IMAGES/ambuplace.jpg) center/cover;
+}
+.blog {
+  background: url(../IMAGES/anatomie.jpg) center/cover;
+}
+
+.servicesitems a {
+  margin-inline: auto;
+  width: 95%;
+  margin-top: 0.625rem;
+}
+.servicesitems button {
+  height: 2.5rem;
+  width: 100%;
+  border: 1px solid var(--bg-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+
+/* ***********PHARMACIE EN LIGNE************** */
+
+.bannieremedicament {
+  min-height: 60vh;
+  max-height: 100vh;
+  background: url(../IMAGES/medika.jpg) center/cover;
+  padding-bottom: 3rem;
+  padding-top: 2.8rem;
+}
+
+.medicatextpub {
+  font-family: "Poppins";
+  height: auto;
+  width: 95%;
+  margin-top: 1.3rem;
+  margin-inline: auto;
+  background-color: var(--main-color);
+  font-size: 1rem;
+  text-align: justify;
+  border-radius: 0.625rem;
+  padding: 2px 1rem;
+  box-shadow: 0 0 0.625rem var(--second-color);
+  border: 1px solid var(--second-color);
+}
+
+/* ***********PLACES DES MEDICAMENTS************** */
+
+.marketing {
+  height: auto;
+  width: 100%;
+  background-color: var(--main-color);
+  padding-inline: 1rem;
+  padding-bottom: 2.5rem;
+  position: relative;
+}
+
+.searchbar,
+.searchbarmed {
+  width: 99%;
+  height: 3rem;
+  background-color: var(--bg-color);
+  margin-inline: auto;
+  margin-block: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 0.5rem;
+}
+
+.searchbarmed {
+  width: 90%;
+  padding-inline: 1rem;
+}
+
+.searchbarmed .searchbaritems {
+  width: 95%;
+  margin-inline: auto;
+}
+
+.searchbarmed .searchbaritems #rayonopen {
+  margin-right: 1rem;
+}
+
+.searchbarmed .searchbaritems .searchinput {
+  width: 90%;
+}
+
+.searchbaritems {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+}
+
+#rayonopen {
+  color: var(--second-color);
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.searchinput {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+}
+.searchinput input {
+  height: 1.7rem;
+  width: 85%;
+  padding-inline: 0.625rem 0;
+  border: none;
+  border-radius: 0.324rem 0 0 0.324rem;
+  outline: none;
+  font-size: 0.7rem;
+}
+
+.searchinput button {
+  height: 1.7rem;
+  width: 14%;
+  background-color: var(--second-color);
+  border: none;
+  border-radius: 0 0.324rem 0.324rem 0;
+  padding: 0;
+  margin: 0;
+}
+
+.searchinput button i {
+  font-size: 1.3rem;
+  color: var(--bg-color);
+  margin-inline: auto;
+}
+
+.panierfiltre {
+  width: 10%;
+  color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.panierfiltre i {
+  font-size: 1.5rem;
+  width: 100%;
+  color: var(--second-color);
+}
+
+.marketingtitle {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+
+.indication {
+  font-size: 0.8rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.pharmacieplace {
+  height: auto;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  grid-template-rows: auto;
+  gap: 1rem 1rem;
+  background-color: var(--main-color);
+  padding-bottom: 5rem;
+}
+/* ***********INFOS DU MEDICAMENT POSTE************* */
+.medicamentinfo {
+  height: 19rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0.5rem var(--bg-color);
+  border-radius: 0.4rem;
+  padding-block: 0.3rem;
+}
+
+.imagedumedicament {
+  width: 95%;
+  height: 7rem;
+  background-color: var(--second-color);
+  margin-inline: auto;
+}
+
+.medicamentdescription {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-inline: auto;
+  padding-block: 0.3rem;
+  height: 10rem;
+}
+
+.nomdumedicament {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.typedumedicament {
+  font-size: 0.75rem;
+  font-weight: 550;
+  font-family: "Roboto", sans-serif;
+}
+
+.maladietraites {
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  text-align: justify;
+  font-weight: lighter;
+}
+
+.prixdumedicament {
+  display: flex;
+  align-items: center;
+  padding-left: 0.15rem;
+  background-color: var(--second-color);
+  width: 60%;
+  height: 1.7rem;
+  margin-block: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--main-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.panierachat {
+  height: 2rem;
+  width: 100%;
+  border: solid var(--second-color);
+  border-radius: 0.4rem;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  font-size: 0.8rem;
+}
+
+.panierachat i {
+  color: var(--main-color);
+  margin-right: 0.425rem;
+  font-size: 0.8rem;
+}
+
+/* ********SYSTEME DE PRESCRIPTION EN LIGNE******* */
+.ordonnancespace {
+  padding-top: 5rem;
+  width: 100%;
+  height: auto;
+}
+
+.ordonnancetitle {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.ordonnancinfo {
+  width: 95%;
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+
+.ordonnancinfo h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.medicamentprescrit {
+  border: 1px solid #494141a8;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.medicamentprescrit h3,
+.instructionsup h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.medicamentprescrit span {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.instructionsup {
+  padding-block: 0.5rem;
+  margin-top: 1.2rem;
+  background-color: #f0f0f0;
+  padding-inline: 0.3rem;
+  border-left: 3px solid var(--second-color);
+}
+
+.instructionsup p {
+  font-size: 1rem;
+}
+/* ***************PANIER D'ACHAT*************** */
+.panieritems {
+  width: 93%;
+  margin-inline: auto;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+}
+.medicamentchoisi {
+  width: 95%;
+  height: 7rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem 0.7rem;
+  margin-top: 0.3rem;
+  display: flex;
+  background-color: var(--main-color);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  border-bottom: 1px solid rgba(131, 122, 122, 0.384);
+}
+
+.medicamentchoisi-info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 0.5rem 0.7rem;
+}
+
+.medicamentchoisi-name {
+  font-size: 1rem;
+  margin-block: 0.3rem;
+}
+
+.medicamentchoisi-prix {
+  font-size: 1.03rem;
+  margin-block: 0.3rem 0.6rem;
+  color: var(--second-color);
+}
+
+.supprimer {
+  font-size: 1.05rem;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.supprimer i {
+  font-size: 1rem;
+}
+
+.viderpanier {
+  color: rgb(238, 81, 81);
+  font-size: 1rem;
+}
+
+.quantite-control {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  height: 1.5rem;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.quantite-control button {
+  width: 30%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-color);
+  border: none;
+  color: var(--main-color);
+}
+.total {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-inline: auto;
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+  gap: 1rem;
+}
+.total strong {
+  margin-left: auto;
+}
+
+.total button,
+.buttonValidateur {
+  height: 2.5rem;
+  border: none;
+  background-color: var(--second-color);
+  border-radius: 0.3rem;
+  font-size: 1.04rem;
+  color: var(--main-color);
+}
+
+.favorispace {
+  width: 92%;
+  margin-inline: auto;
+  margin-block: 1rem;
+}
+
+/* ***********VALIDATION DE COMMANDES************ */
+
+.confirmationAchat,
+.RDVformspace,
+.reserveformspace,
+.editprofilspace {
+  height: auto;
+  width: 93%;
+  margin-inline: auto;
+  margin-block: 3rem;
+}
+
+.commandeform,
+.RDVform,
+.reserveform,
+.editprofilform {
+  width: 100%;
+  background-color: var(--main-color);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+}
+
+.commandetitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.commandeform input,
+.commandeform select,
+.RDVform input,
+.RDVform select,
+.reserveform input,
+.editprofilform input,
+.editprofilform select {
+  padding-left: 0.5rem;
+  height: 2rem;
+  margin-block: 0.5rem;
+  border: 1px solid var(--bg-color);
+  border-radius: 0.3rem;
+  outline: none;
+  background-color: var(--main-color);
+  width: 100%;
+}
+
+.buttonValidateur {
+  background-color: var(--bg-color);
+}
+
+/* ************PRISE DE RDV**************** */
+.RDVformspace {
+  margin-block: 1rem 2rem;
+}
+.RDVform label,
+.reserveform label,
+.editprofilform label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-block: 0.3rem;
+}
+
+.RDVform input,
+.reserveform input,
+.editprofilform input {
+  margin-block: 0;
+}
+
+.RDVform textarea,
+.reserveform textarea {
+  width: 100%;
+  height: 5rem;
+  resize: none;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* ***************AVIS DES CLIENTS****************** */
+
+.avisdesclients {
+  width: 100%;
+  height: auto;
+  padding-inline: 0.65rem;
+  padding-block: 2rem;
+  background-color: var(--bg-color);
+}
+
+.avistitle {
+  font-size: 1.1rem;
+  color: var(--main-color);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.boitesavis {
+  width: 95%;
+  height: auto;
+  padding: 2.5rem 0.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.aviscrollable {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 80%;
+  gap: 0 0.8rem;
+}
+.aviscrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.boitesavis button {
+  height: 6rem;
+  width: 7%;
+  background-color: var(--bg-color);
+  border: none;
+}
+.boitesavis button i {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+.placeavis {
+  width: 100%;
+  height: 15rem;
+  border: 1px solid var(--second-color);
+  padding-left: 1rem;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  flex: 0 0 100%;
+}
+.avisheader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 2.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.photoduclient {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: aqua;
+  margin-right: 0.5rem;
+}
+
+.nomduclient {
+  font-size: 0.8rem;
+  color: var(--main-color);
+}
+.avisbody {
+  width: 100%;
+}
+
+.notedonne {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.notedonne i {
+  color: gold;
+  font-size: 1rem;
+  width: auto;
+  margin-right: 1rem;
+}
+.datepublication {
+  color: var(--main-color);
+  font-size: 1rem;
+}
+
+.commentaireduclient {
+  color: var(--main-color);
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+/* **************CONSULTATION EN LIGNE********* */
+.medecinebanniere {
+  padding-block: 4rem;
+}
+
+.medecinetitle {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-block: 1.5rem 2rem;
+}
+
+.medecinadvent {
+  font-size: 1.1rem;
+  text-align: left;
+  margin-inline: 1rem;
+  margin-block: 1.5rem 2rem;
+}
+
+.medecinadvent i {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.medecinspace {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding-bottom: 1rem;
+  gap: 2rem 2%;
+}
+
+.medecinitems {
+  width: 90%;
+  height: auto;
+  padding: 1rem 0.5rem 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  border: 0.5px solid var(--bg-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem black;
+}
+
+.imagedumedecin {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  margin-inline: auto;
+}
+
+.nomdumedecin {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.agedumedecin {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.specialitedumedecin,
+.medecinlocalisation {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 0.6rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.medecinlocalisation i {
+  font-size: 1.75rem;
+  color: var(--bg-color);
+  margin-right: 0.2rem;
+}
+
+.prisedecontact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0 2%;
+  margin-top: 1rem;
+  align-items: center;
+  padding-inline: 2%;
+}
+
+.prisedecontact a {
+  flex: 0 0 47%;
+}
+
+.prisedecontact a button {
+  height: 2.7rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  align-items: center;
+  text-align: center;
+}
+
+.cabinet {
+  background-color: var(--second-color);
+  color: var(--bg-color);
+}
+
+.enligne {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+
+.savoirplus {
+  font-size: 1.4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-decoration: underline;
+}
+
+/* ***********SERVICE DE SANTE***************** */
+
+.servicemedical {
+  width: 100%;
+  height: auto;
+  padding-block: 1rem 3rem;
+  background-color: antiquewhite;
+}
+
+.servicetitle {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.servicespacem {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 47.5%);
+  grid-template-rows: auto;
+  margin: 0 auto;
+  gap: 1.5rem 5%;
+  padding-inline: auto;
+}
+
+.servicesitem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.iconduservice {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background-color: var(--main-color);
+  border-radius: 0.6rem;
+}
+
+.servicetype {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.servicereservation {
+  height: 2rem;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  border: none;
+  border-radius: 0.4rem;
+}
+
+/* ************AMBULANCE*********** */
+
+.ambulancespace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: url(../IMAGES/ambe.jpg) center/cover;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding-top: 7rem;
+}
+
+.ambulancespace h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.ambulancecall h2 {
+  color: var(--bg-color);
+  padding: 15px;
+  opacity: 1;
+  text-shadow: 3px -1px 3px rgb(250, 250, 250);
+}
+.ambulancespaces {
+  margin-bottom: 3rem;
+}
+
+.ambulanceform {
+  padding-bottom: 2rem;
+}
+
+#map {
+  height: 250px;
+  background-color: var(--main-color);
+}
+
+/* **********PAGE D'INSCRIPTION***************** */
+/* Importation de la police */
+.inscriptionbody {
+  overflow: hidden;
+}
+/* Arrière-plan */
+.home {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  text-decoration: underline;
+}
+.home2 {
+  position: absolute;
+  top: 10px;
+  left: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.home i,
+.home2 i {
+  font-size: 1.2rem;
+  color: var(--main-color);
+  margin-right: 0.5rem;
+}
+.inscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, #001f3f, #000);
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 1px;
+  padding-top: 2.5rem;
+}
+
+/* Effet graphique en arrière-plan */
+
+.inscription::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  transform: rotate(-25deg);
+  z-index: 0;
+}
+
+/* FORMULAIRE D'inscription */
+.inspace {
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--second-color);
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 80%;
+}
+
+.form-box {
+  background: rgba(251, 251, 253, 0.233);
+  padding: 30px 30px 1px 30px;
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.insavatar {
+  background: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: -50px auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--bg-color);
+  border: 5px solid var(--main-color);
+}
+
+.inscription h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  padding-left: 40px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  font-size: 14px;
+}
+
+/* Bouton */
+.submit-btn {
+  background: var(--main-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.registerlink {
+  color: white;
+  padding: 10px;
+}
+
+.registerlink a {
+  text-decoration: underline;
+  color: #007a99;
+}
+
+/* *******PROFIL DE L'UTILISATEUR************ */
+.profil-item {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.arriereplan {
+  width: 100%;
+  height: 300px;
+  background-color: var(--bg-color);
+  border-radius: 0 0 25px 25px;
+}
+
+.userinfo {
+  width: 92%;
+  left: 4%;
+  position: absolute;
+  background-color: var(--main-color);
+  top: 150px;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem black;
+}
+
+.userimage {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background-color: var(--second-color);
+  margin-inline: auto;
+  position: absolute;
+  top: -3.5rem;
+  left: 32.5%;
+  right: 32.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userimage i {
+  color: var(--bg-color) !important;
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 0rem;
+  color: var(--bg-color);
+  left: 4.5rem;
+}
+
+.username {
+  margin-top: 4.2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.useremail {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.modification {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-inline: auto;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.modification a {
+  width: 33%;
+}
+
+.modification div {
+  cursor: pointer;
+  background-color: var(--main-color);
+  width: 100%;
+  border: 2px solid var(--bg-color);
+  border-radius: 0.5rem;
+}
+
+.modification div button {
+  background-color: var(--main-color);
+  border: none;
+  width: 60%;
+  margin-inline: 20%;
+  margin-top: 0.5rem;
+}
+
+.modification div button i {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+}
+
+.modification div p {
+  color: var(--bg-color);
+  font-size: 0.8rem;
+  text-align: center;
+  margin-block: 0.4rem;
+}
+
+.profil-action {
+  width: 100%;
+  margin-inline: auto;
+  height: auto;
+  padding-block: 7rem 1rem;
+  background-color: #f0f0f0;
+  padding-inline: 4%;
+}
+
+.profil-action h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.profil-action a {
+  width: 91%;
+}
+
+.profil-action a div {
+  height: 2.7rem;
+  width: 100%;
+  background-color: var(--main-color);
+  margin-bottom: 0.9rem;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 0.8rem;
+}
+
+.i1 {
+  width: 10%;
+}
+
+.i2 {
+  margin-left: auto;
+}
+
+
+.log-out{
+  height:3rem;
+  width: 92%;
+  margin-inline: 4%;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: var(--second-color);
+  font-size: 1.3rem;
+  color: var(--main-color);
+  margin-block:1rem 2rem;
+}
+
+/* **********HISTORIQUES DES RDV************** */
+.rdv-body {
+  background-color: #f0f0f0;
+}
+.headerRDV {
+  height: auto;
+  background-color: var(--main-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  border-bottom: 1px solid #2720203e;
+}
+
+.headerRDV h1 {
+  text-align: center;
+  font-size: 1rem;
+  width: 80%;
+}
+
+.headerRDV i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  float: left;
+}
+
+.historiqueRDV,
+.historiqueAchat {
+  width: 92%;
+  height: auto;
+  padding: 1rem 0;
+  margin-inline: auto;
+}
+
+.historiqueRDV h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.rdv-a-venir,
+.rdv-passes,
+.achat-items {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.rdv-a-venir div,
+.rdv-passes div,
+.achat-items div {
+  width: 100%;
+  background-color: var(--main-color);
+  margin: 2px;
+  min-height: 2.3rem;
+  max-height: 3rem;
+  padding-block: 1rem;
+  align-items: center;
+  border-radius: 0.7rem;
+}
+
+/* **********BLOG MEDICAL************* */
+
+.blog-title {
+  font-size: 1.3rem;
+  margin-inline: 1rem;
+}
+.blog-space {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+.blog-item {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.1rem black;
+}
+
+.image-illustrative {
+  height: 12rem;
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 1px;
+}
+
+.sujet-description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding-inline: 1rem;
+  overflow: hidden;
+}
+
+.sujet-sante {
+  font-size: 1.5rem;
+  margin-block: 0.5rem 1rem;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.theme-sante {
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: "Roboto";
+  color: rgb(112, 112, 112);
+  text-transform: uppercase;
+  display: flex;
+  gap: 0.3rem;
+  margin-block: 1.5rem 0.5rem;
+}
+
+.date-publication {
+  color: rgb(112, 112, 112);
+}
+
+.sujet-detail {
+  font-size: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4rem;
+  max-height: 2.8rem;
+  padding-bottom: 0.2rem;
+  font-weight: 100;
+}
+
+.sujet-description a,
+.sujet-description a i {
+  color: var(--second-color);
+}
+/* **********PRISE DE RDV*************** */
+/* ***********VERSION TABLETTES*********** */
+
+/* ************MODE PORTRAIT*************** */
+
+@media screen and (min-width: 640px) and (max-width: 991px) {
+  /* *************BARRE DE NAVIGATION****************** */
+
+  .menu {
+    width: 65%;
+  }
+
+  .menu a {
+    text-decoration: none;
+  }
+
+  .iconbar {
+    width: 4.5rem;
+    margin-left: 2rem;
+    font-size: 2.3rem;
+    margin-right: 2rem;
+    border-radius: 0.3rem;
+  }
+
+  .logo-name {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .profil-panier {
+    height: 4rem;
+    gap: 1rem;
+    margin-right: 2rem;
+    width: 20%;
+    border-radius: 2rem;
+    justify-content: space-between;
+    padding-inline: 0.5rem;
+  }
+
+  .user-icon,
+  .panier-div {
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .panier-div i {
+    font-size: 1.5rem;
+  }
+
+  #closerayon {
+    font-size: 2.5rem;
+    margin-inline: 1rem;
+  }
+  .rayondemedicament {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .rayonitems {
+    padding-left: 2.5rem;
+  }
+  .rayontitle {
+    font-size: 2rem;
+  }
+
+  .rayonlinks {
+    font-size: 1.8rem;
+    gap: 1.7rem;
+    margin: 1.5rem 0.3rem;
+  }
+
+  .navitems {
+    display: none;
+  }
+
+  .medecinebanniere {
+    padding-top: 9rem;
+  }
+
+  .sidebar {
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .sidebarspace {
+    min-height: 110vh;
+    width: 90%;
+    margin-inline: 8% 2%;
+    margin-top: 0;
+    margin-bottom: auto;
+    border-left: 6px solid var(--second-color);
+    box-shadow: 0 0 20px var(--second-color);
+    border-radius: 10px 0 0 10px;
+    z-index: 999;
+  }
+
+  .sidebarspace h2 {
+    font-size: 1.9rem;
+    padding: 1.8rem 0;
+  }
+
+  .nontrouve {
+    margin-top: 1rem;
+    text-align: center;
+    display: none;
+    font-size: 1.1rem;
+    color: red;
+  }
+
+  #sideclose {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  .siditems2 {
+    bottom: 3rem;
+  }
+  .sidelinks {
+    gap: 0.5rem;
+    margin: 0.5rem;
+  }
+  .sidelinks i {
+    font-size: 1.55rem;
+  }
+
+  .sidelinks span {
+    font-size: 1.55rem;
+    margin-inline: 10px;
+  }
+
+  /* **************CORPS DE PAGE************** */
+  .principale {
+    width: 100%;
+    height: auto;
+  }
+
+  .banniere {
+    height: auto;
+    padding-inline: 1.2rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+  .banniereitems {
+    width: 70%;
+    height: auto;
+  }
+
+  .annonce {
+    height: 70%;
+  }
+
+  #btnbann {
+    margin-left: 3.5rem;
+    margin-right: 1rem;
+  }
+  .banniere-btn {
+    height: 4.5rem;
+    width: 40%;
+    font-size: 1.8rem;
+    margin: 1.5625rem 0.8rem 0.7rem 0.625rem;
+  }
+
+  .pharmavirtuelle {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .symb {
+    height: 15rem;
+    width: auto;
+    display: block;
+    background: url(../IMAGES/imgph.png) center/15rem no-repeat;
+  }
+
+  .pharmavirtuelle .banniere-btn {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .service {
+    height: auto;
+    width: 100%;
+    background: var(--main-color);
+    padding: 1.875rem 0 1.5rem 0;
+  }
+
+  .service h2 {
+    font-size: 2rem;
+  }
+
+  .servicespace {
+    margin-top: 3rem;
+  }
+
+  .servicesitems {
+    height: auto;
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+  .servimage {
+    height: 16rem;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .servicesitems a {
+    margin-top: 1rem;
+  }
+  .servicesitems button {
+    height: 4rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 0.8rem;
+  }
+
+  /* ************AMBULANCE*********** */
+
+  .ambulancespace {
+    width: 100%;
+  }
+
+  .ambulancespaces {
+    margin-bottom: 3rem;
+  }
+
+  .form-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .ambulanceform {
+    padding-bottom: 2rem;
+  }
+
+  #map {
+    height: 250px;
+    background-color: var(--main-color);
+  }
+
+  /************ FORMULAIRE D'inscription *************/
+  .inspace {
+    width: 70%;
+    margin-block: 2rem 3rem;
+  }
+  /* ***********PHARMACIE EN LIGNE************** */
+
+  .bannieremedicament {
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .banniereitems {
+    width: 95%;
+    margin-inline: auto;
+    margin-block: 4rem;
+  }
+
+  .annonce {
+    height: 20rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .medicatextpub {
+    margin-top: 1.3rem;
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+
+  .pharmavirtuelle {
+    display: none;
+  }
+
+  /* ***********PLACES DES MEDICAMENTS************** */
+
+  .marketing {
+    padding-inline: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .marketingtitle {
+    font-size: 1.7rem;
+  }
+
+  .searchbar,
+  .searchbarmed {
+    width: 90%;
+    height: 4.5rem;
+    margin-block: 1.5rem;
+    padding-inline: 2rem;
+  }
+
+  .searchbarmed {
+    width: 90%;
+    padding-inline: 2rem;
+  }
+
+  .searchbarmed .searchbaritems {
+    width: 100%;
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  .searchbarmed .searchbaritems #rayonopen {
+    margin-right: 2rem;
+  }
+
+  .searchbarmed .searchbaritems .searchinput {
+    width: 95%;
+  }
+
+  .searchbaritems {
+    width: 100%;
+  }
+
+  #rayonopen {
+    font-size: 3rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .searchinput {
+    width: 85%;
+    height: 4rem;
+    align-items: center;
+  }
+  .searchinput input {
+    height: 2.5rem;
+    width: 90%;
+    font-size: 1.3rem;
+  }
+
+  .searchinput button {
+    height: 2.5rem;
+    width: 10%;
+  }
+
+  .searchinput button i {
+    font-size: 1.7rem;
+  }
+
+  .panierfiltre {
+    width: 5%;
+    margin-left: 2rem;
+  }
+
+  .panierfiltre i {
+    font-size: 2.2rem;
+  }
+
+  .indication {
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    margin-inline: 0.5rem;
+  }
+
+  .pharmacieplace {
+    gap: 2rem 4%;
+    padding-inline: 2%;
+  }
+
+  /* ********INFOS DU MEDICAMENT POSTE************* */
+  .medicamentinfo {
+    height: 35rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+  }
+
+  .imagedumedicament {
+    width: 95%;
+    height: 12rem;
+  }
+
+  .medicamentdescription {
+    padding-block: 1rem;
+    height: 22rem;
+  }
+
+  .nomdumedicament {
+    font-size: 1.8rem;
+  }
+
+  .typedumedicament {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+  }
+
+  .maladietraites {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .prixdumedicament {
+    height: 3.4rem;
+    font-size: 2rem;
+    margin-block: 1rem;
+    border-radius: 0.4rem;
+  }
+
+  .panierachat {
+    height: 4rem;
+    font-size: 1.6rem;
+  }
+
+  .panierachat i {
+    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  /* ********SYSTEME DE PRESCRIPTION EN LIGNE******* */
+  .ordonnancespace {
+    padding-top: 10rem;
+  }
+
+  .ordonnancetitle {
+    font-size: 2rem;
+    margin-left: 2rem;
+    gap: 0.5rem;
+  }
+
+  .ordonnancinfo {
+    margin-top: 2rem;
+  }
+
+  .ordonnancinfo h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .medicamentprescrit {
+    border: 1px solid #494141a8;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding-block: 1rem;
+    padding-inline: 0.9rem;
+  }
+  .ordonnancespace h3 {
+    font-size: 1.7rem;
+  }
+  .medicamentprescrit span {
+    font-size: 1.7rem;
+  }
+
+  .instructionsup {
+    padding-block: 1rem;
+    margin-top: 1.7rem;
+    padding-inline: 0.5rem;
+    border-left: 5px solid var(--second-color);
+  }
+
+  .instructionsup p {
+    font-size: 1.65rem;
+  }
+
+  /* ***************PANIER D'ACHAT*************** */
+  .panieritems {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .medicamentchoisi {
+    width: 95%;
+    height: 10rem;
+    padding-inline: 0.5rem;
+    padding-block: 1rem 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .medicamentchoisi-info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.5rem 0.7rem;
+  }
+
+  .medicamentchoisi-name {
+    font-size: 1.5rem;
+    margin-block: 0.3rem;
+  }
+
+  .medicamentchoisi-prix {
+    font-size: 1.5rem;
+    margin-block: 0.5rem 1rem;
+    color: var(--second-color);
+  }
+
+  .supprimer {
+    font-size: 1.5rem;
+  }
+
+  .supprimer i {
+    font-size: 1.5rem;
+  }
+
+  .viderpanier {
+    font-size: 1rem;
+  }
+
+  .quantite-control {
+    width: 25%;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .quantite-control button {
+    width: 30%;
+    font-size: 2rem;
+  }
+  .total {
+    padding-block: 1.5rem;
+    padding-inline: 0.5rem;
+    gap: 1rem;
+  }
+  .total strong {
+    margin-left: auto;
+    font-size: 1.5rem;
+  }
+
+  .total button,
+  .buttonValidateur {
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .favorispace {
+    width: 92%;
+    margin-inline: auto;
+    margin-block: 1rem;
+  }
+
+  /* ***********VALIDATION DE COMMANDES************ */
+
+  .confirmationAchat,
+  .RDVformspace,
+  .reserveformspace,
+  .editprofilspace {
+    width: 80%;
+    margin-block: 4rem;
+  }
+
+  .commandeform,
+  .RDVform,
+  .reserveform,
+  .editprofilform {
+    padding-inline: 1rem;
+    padding-block: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .commandetitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .commandeform input,
+  .commandeform select,
+  .RDVform input,
+  .RDVform select,
+  .reserveform input {
+    height: 2.7rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    margin-block: 0.7rem;
+  }
+
+  .buttonValidateur {
+    background-color: var(--bg-color);
+    margin-top: 1rem;
+  }
+
+  /* ************PRISE DE RDV**************** */
+  .RDVformspace {
+    margin-block: 1rem 2rem;
+  }
+  .RDVform label,
+  .reserveform label,
+  .editprofilform label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-block: 0.3rem;
+  }
+
+  .RDVform input,
+  .reserveform input,
+  .editprofilform input {
+    margin-block: 0;
+  }
+
+  .RDVform textarea,
+  .reserveform textarea {
+    width: 100%;
+    height: 5rem;
+    resize: none;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  /* ***************AVIS DES CLIENTS************* */
+
+  .avisdesclients {
+    padding-inline: 0.65rem;
+    padding-block: 2rem;
+  }
+
+  .avistitle {
+    font-size: 1.7rem;
+  }
+
+  .boitesavis {
+    padding: 2.5rem 0.2rem;
+  }
+
+  .aviscrollable {
+    width: 80%;
+    gap: 0 1rem;
+  }
+  .aviscrollable::-webkit-scrollbar {
+    display: none;
+  }
+
+  .boitesavis button {
+    height: 8rem;
+    width: 7%;
+  }
+  .boitesavis button i {
+    font-size: 3rem;
+  }
+  .placeavis {
+    width: 100%;
+    height: 23rem;
+    padding: 1.5rem;
+    flex-shrink: 0;
+  }
+  .avisheader {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+
+  .photoduclient {
+    height: 5rem;
+    width: 5rem;
+    margin-right: 1rem;
+  }
+
+  .nomduclient {
+    font-size: 2rem;
+    opacity: 1;
+  }
+  .avisbody {
+    width: 100%;
+  }
+  .notedonne {
+    margin-top: 2rem;
+  }
+
+  .notedonne i {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+  }
+  .datepublication {
+    font-size: 2rem;
+  }
+
+  .commentaireduclient {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  /* **************CONSULTATION EN LIGNE********* */
+  .medecinetitle {
+    font-size: 2rem;
+    margin-block: 2rem 2.5rem;
+  }
+
+  .medecinspace {
+    width: 90%;
+    grid-template-columns: repeat(2, 47%);
+    gap: 0 6%;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+  }
+
+  .medecinitems {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+  }
+
+  .imagedumedecin {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .nomdumedecin {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .agedumedecin {
+    font-size: 1.7rem;
+  }
+
+  .specialitedumedecin {
+    font-size: 1.8rem;
+  }
+
+  .prisedecontact {
+    width: 98%;
+    gap: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .prisedecontact button {
+    height: 3.5rem;
+    width: 45%;
+    font-size: 1rem;
+  }
+
+  .savoirplus {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-right: auto;
+  }
+
+  /* ***********SERVICE DE SANTE***************** */
+
+  .servicemedical {
+    width: 100%;
+    height: auto;
+    padding-block: 1rem 3rem;
+    background-color: antiquewhite;
+  }
+
+  .servicetitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .servicespacem {
+    width: 90%;
+    grid-template-columns: repeat(3, 32%);
+    gap: 1.5rem 2%;
+    padding-inline: auto;
+  }
+
+  .iconduservice {
+    height: 8rem;
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  .servicetype {
+    font-size: 1.5rem;
+    margin: 0.7rem 0;
+  }
+
+  .servicereservation {
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+  }
+
+  /* *******PROFIL DE L'UTILISATEUR************ */
+
+  .arriereplan {
+    height: 400px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .userinfo {
+    top: 200px;
+  }
+
+  .userimage {
+    height: 10rem;
+    width: 10rem;
+    top: -5rem;
+  }
+
+  .userimage i {
+    font-size: 1.6rem;
+    bottom: 0rem;
+    left: 6rem;
+  }
+
+  .username {
+    margin-top: 6rem;
+    font-size: 1.6rem;
+  }
+
+  .useremail {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .modification {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .modification a {
+    width: 33%;
+  }
+
+  .modification div {
+    border-radius: 0.6rem;
+  }
+
+  .modification div button {
+    margin-top: 0.7rem;
+  }
+
+  .modification div button i {
+    font-size: 2.5rem;
+  }
+
+  .modification div p {
+    font-size: 1.5rem;
+    margin-block: 0.5rem;
+  }
+
+  .profil-action {
+    padding-block: 11rem 2rem;
+  }
+
+  .profil-action h2 {
+    font-size: 1.5rem;
+  }
+
+  .profil-action a div {
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .i1 {
+    width: 10%;
+  }
+
+  .i2 {
+    margin-left: auto;
+  }
+
+  .log-out{
+    height:4rem;
+    font-size: 1.6rem;
+  }
+
+  /* **********HISTORIQUES DES RDV************** */
+  .headerRDV {
+    padding: 1rem;
+  }
+
+  .headerRDV h1 {
+    font-size: 1.4rem;
+  }
+
+  .headerRDV i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+  }
+
+  .historiqueRDV,
+  .historiqueAchat {
+    padding: 1.5rem 0;
+  }
+
+  .historiqueRDV h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .rdv-a-venir,
+  .rdv-passes,
+  .achat-items {
+    margin-bottom: 2rem;
+  }
+  .rdv-a-venir div,
+  .rdv-passes div,
+  .achat-items div {
+    min-height: 4rem;
+    max-height: 5rem;
+    margin: 2px;
+  }
+
+  /* **********BLOG MEDICAL************* */
+
+  .blog-title {
+    font-size: 2rem;
+    margin-inline: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .blog-space {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 95%;
+    margin-top: 3rem;
+  }
+
+  .blog-item {
+    box-shadow: 0 0 0.5rem black;
+  }
+
+  .image-illustrative {
+    height: 14rem;
+  }
+
+  .sujet-description {
+    height: 14rem;
+    padding-inline: 1.5rem;
+  }
+
+  .sujet-sante {
+    font-size: 1.7rem;
+    margin-block: 1rem 1rem;
+  }
+
+  .theme-sante {
+    font-size: 1.1rem;
+    margin-block: 2rem 0.5rem;
+  }
+
+  .sujet-detail {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    max-height: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .sujet-description a,
+  .sujet-description a i {
+    font-size: 1.4rem;
+  }
+}
+
+/* ************MODE PAYSAGE*************** */
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  /* *************BARRE DE NAVIGATION****************** */
+  header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .navbar {
+    padding: 0 !important;
+  }
+
+  .iconbar {
+    display: none !important;
+  }
+
+  .menu {
+    height: 3.5rem;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 10%;
+    border-bottom: none;
+  }
+  .navitemcontainer {
+    position: absolute;
+    right: 0;
+  }
+  .menu-logo {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+  }
+
+  .logo-name {
+    font-size: 1.3rem;
+    color: var(--bg-color) !important;
+    margin: 0;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+  .logo {
+    height: 2rem !important;
+    width: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    color: var(--bg-color) !important ;
+    transition: 0.3s ease !important;
+    margin-right: 0.2rem;
+  }
+
+  .nav-link:hover {
+    color: var(--second-color) !important;
+    scale: 1.09;
+  }
+
+  .nav-item .active {
+    color: var(--second-color) !important ;
+  }
+
+  .profil-panier {
+    position: absolute;
+    right: 1rem;
+    background-color: #f0f0f0;
+    width: 10%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding-inline: 0.5rem;
+    border-radius: 0.3rem;
+    justify-content: space-between;
+  }
+
+  .profil-panier div {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-icon {
+    background-color: var(--bg-color);
+  }
+
+  .profil-panier i {
+    font-size: 0.8rem;
+  }
+
+  #closerayon {
+    font-size: 2.5rem;
+    margin-inline: 1rem;
+  }
+  .rayondemedicament {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .rayonitems {
+    padding-left: 2.5rem;
+  }
+  .rayontitle {
+    font-size: 2rem;
+  }
+
+  .rayonlinks {
+    font-size: 1.8rem;
+    gap: 1.7rem;
+    margin: 1.5rem 0.3rem;
+  }
+
+  .medecinebanniere {
+    padding-top: 8rem;
+  }
+
+  .navitems {
+    display: none;
+  }
+
+  /* **************CORPS DE PAGE************** */
+  .principale {
+    width: 100%;
+    height: auto;
+  }
+
+  .banniere {
+    height: 85vh;
+    padding-inline: 1.2rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+  .banniereitems {
+    width: 70%;
+    height: auto;
+  }
+
+  .annonce {
+    height: 70%;
+  }
+
+  #btnbann {
+    margin-left: 3.5rem;
+    margin-right: 1rem;
+  }
+  .banniere-btn {
+    height: 4.5rem;
+    width: 40%;
+    font-size: 1.8rem;
+    margin: 1.5625rem 0.8rem 0.7rem 0.625rem;
+  }
+
+  .pharmavirtuelle {
+    height: 100%;
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .symb {
+    height: 70%;
+    width: auto;
+    display: block;
+    background: url(../IMAGES/imgph.png) center/100% no-repeat;
+  }
+
+  .pharmavirtuelle .banniere-btn {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  .service {
+    height: auto;
+    width: 100%;
+    background: var(--main-color);
+    padding: 1.875rem 0 1.5rem 0;
+  }
+
+  .service h2 {
+    font-size: 2.5rem;
+  }
+
+  .servicespace {
+    margin-top: 4rem;
+    width: 85%;
+    margin-inline: auto;
+  }
+
+  .servicesitems {
+    height: auto;
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+  .servimage {
+    height: 16rem;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .servicesitems a {
+    margin-top: 1rem;
+  }
+  .servicesitems button {
+    height: 4rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border-radius: 0.8rem;
+  }
+
+  /* ************AMBULANCE*********** */
+
+  .ambulancespace {
+    width: 100%;
+  }
+
+  .ambulancespaces {
+    margin-bottom: 3rem;
+  }
+
+  .form-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .ambulanceform {
+    padding-bottom: 2rem;
+  }
+
+  #map {
+    height: 250px;
+    background-color: var(--main-color);
+  }
+
+  /************ FORMULAIRE D'inscription *************/
+  .inspace {
+    width: 80%;
+    margin-block: 2rem 3rem;
+  }
+
+  /* ***********PHARMACIE EN LIGNE************** */
+
+  .bannieremedicament {
+    height: 100vh;
+    padding-bottom: 2rem;
+  }
+
+  .medicatextpub {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .medicasymb {
+    height: 70%;
+    width: 100%;
+    background: url(../IMAGES/armoirepharma.png) center/cover;
+  }
+
+  /* ***********PLACES DES MEDICAMENTS************** */
+
+  .marketing {
+    padding-inline: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .searchbar,
+  .searchbarmed {
+    width: 90%;
+    height: 4.5rem;
+    margin-block: 1.5rem;
+    padding-inline: 2rem;
+  }
+
+  .searchbarmed {
+    width: 90%;
+    padding-inline: 2rem;
+  }
+
+  .searchbarmed .searchbaritems {
+    width: 100%;
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  .searchbarmed .searchbaritems #rayonopen {
+    margin-right: 2rem;
+  }
+
+  .searchbarmed .searchbaritems .searchinput {
+    width: 95%;
+  }
+
+  .searchbaritems {
+    width: 100%;
+  }
+
+  #rayonopen {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  .searchinput {
+    width: 85%;
+    height: 4rem;
+    align-items: center;
+  }
+  .searchinput input {
+    height: 2.5rem;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .searchinput button {
+    height: 2.5rem;
+    width: 10%;
+  }
+
+  .searchinput button i {
+    font-size: 1.7rem;
+  }
+
+  .panierfiltre {
+    width: 5%;
+    margin-left: 2rem;
+  }
+
+  .panierfiltre i {
+    font-size: 2.2rem;
+  }
+  .marketingtitle {
+    font-size: 2rem;
+  }
+
+  .indication {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .pharmacieplace {
+    grid-template-columns: repeat(2, 48.5%);
+    grid-template-rows: auto;
+    gap: 5% 2.5%;
+    padding-inline: 2%;
+  }
+
+  /* ***********INFOS DU MEDICAMENT POSTE************* */
+
+  .medicamentinfo {
+    flex-direction: row;
+    height: 16.5rem;
+    padding-block: 0.5rem;
+  }
+
+  .no-scroll {
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .imagedumedicament {
+    width: 44%;
+    height: 99%;
+    margin-inline: 0.3rem;
+  }
+
+  .medicamentdescription {
+    width: 66%;
+    padding-block: 0.3rem;
+    height: auto;
+    padding-inline: 0.2rem;
+  }
+
+  .nomdumedicament {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .typedumedicament {
+    font-size: 1.5rem;
+    font-weight: 550;
+  }
+
+  .maladietraites {
+    font-size: 1.2rem;
+    margin-block: 0.5rem 0;
+  }
+
+  .prixdumedicament {
+    padding-left: 0.15rem;
+    width: 40%;
+    height: 2rem;
+  }
+
+  .panierachat {
+    height: 2.5rem;
+    width: 80%;
+    font-size: 1rem;
+    margin-inline: auto;
+    cursor: pointer;
+    border-radius: 0.7rem;
+  }
+
+  .panierachat:hover {
+    background-color: var(--second-color);
+    transition: 0.4s ease;
+  }
+
+  .panierachat i {
+    font-size: 1rem;
+  }
+
+  /* *************ORDONNANCES************* */
+
+  .ordonnancespace {
+    padding-top: 10rem;
+  }
+
+  .ordonnancetitle {
+    font-size: 2rem;
+    margin-left: 2rem;
+    gap: 0.5rem;
+  }
+
+  .ordonnancinfo {
+    margin-top: 2rem;
+  }
+
+  .ordonnancinfo h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .medicamentprescrit {
+    border: 1px solid #494141a8;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding-block: 1rem;
+    padding-inline: 0.9rem;
+  }
+  .ordonnancespace h3 {
+    font-size: 1.7rem;
+  }
+  .medicamentprescrit span {
+    font-size: 1.7rem;
+  }
+
+  .instructionsup {
+    padding-block: 1rem;
+    margin-top: 1.7rem;
+    padding-inline: 0.5rem;
+    border-left: 5px solid var(--second-color);
+  }
+
+  .instructionsup p {
+    font-size: 1.65rem;
+  }
+
+  /* ***************AVIS DES CLIENTS****************** */
+
+  .avisdesclients {
+    padding-inline: 0.65rem;
+    padding-block: 2rem;
+  }
+
+  .avistitle {
+    font-size: 2.2rem;
+  }
+
+  .boitesavis {
+    padding: 2.5rem auto;
+  }
+
+  .aviscrollable {
+    width: 80%;
+    gap: 0 1rem;
+  }
+  .aviscrollable::-webkit-scrollbar {
+    display: none;
+  }
+
+  .boitesavis button {
+    height: 8rem;
+    width: 7%;
+  }
+  .boitesavis button i {
+    font-size: 3rem;
+  }
+  .placeavis {
+    width: 100%;
+    height: 24rem;
+    padding: 1.5rem;
+    flex-shrink: 0;
+  }
+  .avisheader {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+
+  .photoduclient {
+    height: 5rem;
+    width: 5rem;
+    margin-right: 1rem;
+  }
+
+  .nomduclient {
+    font-size: 2rem;
+    opacity: 1;
+  }
+  .avisbody {
+    width: 100%;
+  }
+  .notedonne {
+    margin-top: 2rem;
+  }
+
+  .notedonne i {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+  }
+  .datepublication {
+    font-size: 2rem;
+  }
+
+  .commentaireduclient {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+  }
+  /* **************CONSULTATION EN LIGNE********* */
+  .medecinetitle {
+    font-size: 2rem;
+    margin-block: 2rem 2.5rem;
+  }
+
+  .medecinspace {
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: repeat(2, 49%);
+    gap: 0 2%;
+    padding-bottom: 5rem;
+  }
+  .savoirplus {
+    margin-top: 2rem;
+    font-size: 2.3rem;
+    text-decoration: underline;
+    margin-right: auto;
+  }
+  .medecinitems {
+    width: 100%;
+  }
+
+  .imagedumedecin {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .nomdumedecin {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .agedumedecin {
+    font-size: 1.7rem;
+  }
+
+  .specialitedumedecin {
+    font-size: 1.8rem;
+  }
+
+  .prisedecontact {
+    width: 98%;
+    gap: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .prisedecontact button {
+    height: 3.5rem;
+    width: 45%;
+    font-size: 1.5rem;
+  }
+  /* ***********SERVICE DE SANTE***************** */
+
+  .servicemedical {
+    width: 100%;
+    height: auto;
+    padding-block: 2rem 3rem;
+    background-color: antiquewhite;
+  }
+
+  .servicetitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .servicespacem {
+    width: 90%;
+    grid-template-columns: repeat(3, 32%);
+    gap: 1.5rem 2%;
+    padding-inline: auto;
+  }
+
+  .iconduservice {
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    font-size: 6rem;
+  }
+
+  .servicetype {
+    font-size: 1.7rem;
+    margin: 0.7rem 0;
+  }
+
+  .servicereservation {
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+  }
+
+  /* *******PROFIL DE L'UTILISATEUR************ */
+  .arriereplan {
+    height: 400px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .userinfo {
+    top: 200px;
+  }
+
+  .userimage {
+    height: 10rem;
+    width: 10rem;
+    top: -5rem;
+  }
+
+  .userimage i {
+    font-size: 1.6rem;
+    bottom: 0rem;
+    left: 8rem;
+  }
+
+  .username {
+    margin-top: 7.5rem;
+    font-size: 1.2rem;
+  }
+
+  .useremail {
+    font-size: 1.5rem;
+  }
+
+  .modification {
+    width: 55%;
+    margin-top: 2.5rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+  }
+
+  .modification a {
+    width: 33%;
+  }
+
+  .modification div {
+    border-radius: 0.6rem;
+  }
+
+  .modification div button {
+    margin-top: 0.7rem;
+  }
+
+  .modification div button i {
+    font-size: 2.5rem;
+  }
+
+  .modification div p {
+    font-size: 1.5rem;
+    margin-block: 0.5rem;
+  }
+
+  .profil-action {
+    padding-block: 16rem 2rem;
+  }
+
+  .profil-action h2 {
+    font-size: 1.7rem;
+  }
+
+  .profil-action a div {
+    height: 5rem;
+    margin-bottom: 1rem;
+    padding-inline: 1rem;
+    font-size: 1.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .i1 {
+    width: 3%;
+  }
+
+  .i2 {
+    margin-left: auto;
+  }
+
+  .log-out{
+    height:4rem;
+    font-size: 1.6rem;
+  }
+  
+  /* **********HISTORIQUES DES RDV************** */
+  .headerRDV {
+    padding: 1.5rem;
+  }
+
+  .headerRDV h1 {
+    font-size: 2rem;
+  }
+
+  .headerRDV i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+
+  .historiqueRDV,
+  .historiqueAchat {
+    padding: 1.5rem 0;
+  }
+
+  .historiqueRDV h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .rdv-a-venir,
+  .rdv-passes,
+  .achat-items {
+    margin-bottom: 2rem;
+  }
+  .rdv-a-venir div,
+  .rdv-passes div,
+  .achat-items div {
+    min-height: 4rem;
+    max-height: 5rem;
+    margin: 2px;
+  }
+
+   /* **********BLOG MEDICAL************* */
+
+   .blog-title {
+    font-size: 2.5rem;
+    margin-inline: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .blog-space {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 95%;
+    margin-top: 3rem;
+  }
+
+  .blog-item {
+    box-shadow: 0 0 0.5rem black;
+  }
+
+  .image-illustrative {
+    height: 14rem;
+  }
+
+  .sujet-description {
+    height: 14rem;
+    padding-inline: 1.5rem;
+  }
+
+  .sujet-sante {
+    font-size: 1.7rem;
+    margin-block: 1rem 1rem;
+  }
+
+  .theme-sante {
+    font-size: 1.1rem;
+    margin-block: 2rem 0.5rem;
+  }
+
+  .sujet-detail {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    max-height: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .sujet-description a,
+  .sujet-description a i {
+    font-size: 1.4rem;
+  }
+}
+
+/* ********************VERSION ORDINATEUR**************** */
+
+@media screen and (min-width: 1280px) {
+  header {
+    position: fixed;
+    height: auto;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .navbar {
+    padding: 0 !important;
+  }
+
+  .navitemcontainer {
+    position: absolute;
+    right: 0;
+  }
+
+  .iconbar {
+    display: none !important;
+  }
+
+  .menu {
+    height: 3.5rem;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 10%;
+  }
+
+  .menu-logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+  }
+
+  .logo-name {
+    font-size: 1.5rem;
+    color: var(--bg-color) !important;
+    margin: 0;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+  .logo {
+    height: 3rem !important;
+    width: 3rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    color: var(--bg-color) !important ;
+    transition: 0.3s ease !important;
+    margin-right: 1rem;
+  }
+
+  .nav-link:hover {
+    color: var(--second-color) !important;
+    scale: 1.09;
+  }
+
+  .nav-item .active {
+    color: var(--second-color) !important ;
+  }
+
+  .profil-panier {
+    position: absolute;
+    right: 0;
+    background-color: #f0f0f0;
+    width: 7%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding-inline: 0.5rem;
+    border-radius: 0.3rem;
+    justify-content: space-between;
+  }
+
+  .profil-panier div {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-icon {
+    background-color: var(--bg-color);
+  }
+
+  .profil-panier i {
+    font-size: 0.8rem;
+  }
+
+  #closerayon {
+    font-size: 2.5rem;
+    margin-inline: 1rem;
+  }
+  .rayondemedicament {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+  }
+
+  .rayonitems {
+    padding-left: 2.5rem;
+  }
+  .rayontitle {
+    font-size: 2rem;
+  }
+
+  .rayonlinks {
+    font-size: 1.8rem;
+    gap: 1.7rem;
+    margin: 1.5rem 0.3rem;
+  }
+
+  .medecinebanniere {
+    padding-top: 8rem;
+  }
+
+  .sidebar {
+    min-height: 120vh;
+  }
+
+  .sidebarspace {
+    width: 80%;
+    padding-left: 3rem;
+    margin-inline: 16% 4%;
+  }
+
+  .sidebarspace h2 {
+    font-size: 2.5rem;
+    padding: 1rem 0 1.5rem 0;
+  }
+
+  #sideclose {
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+
+  .siditems2 {
+    bottom: 1rem;
+  }
+  .sidelinks {
+    gap: 0.8rem;
+    height: 4rem;
+  }
+  .sidelinks i {
+    font-size: 1.7rem;
+    line-height: 1.5;
+  }
+
+  .sidelinks span {
+    font-size: 1.7rem;
+  }
+  /* **************CORPS DE PAGE************** */
+  .principale {
+    width: 100%;
+    height: auto;
+  }
+
+  .banniere {
+    height: 85vh;
+    padding-inline: 1.2rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    gap: 5%;
+  }
+  .banniereitems {
+    width: 65%;
+    height: auto;
+  }
+
+  .banniereitems a:first-child button {
+    margin-left: 2.5rem;
+  }
+
+  .banniereitems a:last-child button {
+    margin-right: 2.5rem;
+  }
+
+  .annonce {
+    height: 70%;
+    margin-bottom: 2rem;
+  }
+
+  #btnbann {
+    margin-left: 3.5rem;
+    margin-right: 1rem;
+  }
+  .banniere-btn {
+    height: 4.5rem;
+    width: 40%;
+    font-size: 1.2rem;
+    margin: 1.5625rem 0.8rem 0.7rem 0.625rem;
+    cursor: pointer;
+  }
+
+  .pharmavirtuelle {
+    height: auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .symb {
+    height: 70%;
+    width: 100%;
+    display: block;
+    background: url(../IMAGES/imgph.png) center/80% no-repeat;
+    margin-bottom: 2rem;
+  }
+
+  .pharmavirtuelle .banniere-btn {
+    width: 80%;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+
+  .banniere-btn:hover {
+    background-color: var(--second-color);
+    color: var(--bg-color);
+  }
+
+  .service {
+    height: auto;
+    width: 100%;
+    background: var(--main-color);
+    padding: 1.875rem 0 1.5rem 0;
+    padding-block: 3rem;
+  }
+
+  .service h2 {
+    font-size: 1.5rem;
+  }
+
+  .servicespace {
+    margin-top: 4rem;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .servicesitems {
+    height: auto;
+    width: 20%;
+    margin-bottom: 2rem;
+  }
+  .servimage {
+    height: 10rem;
+  }
+
+  .servicesitems a {
+    margin-top: 1rem;
+  }
+  .servicesitems button {
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  /* ************AMBULANCE*********** */
+
+  .ambulancespace {
+    width: 100%;
+  }
+
+  .ambulancespaces {
+    margin-bottom: 3rem;
+  }
+
+  .form-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .ambulanceform {
+    padding-bottom: 2rem;
+  }
+
+  #map {
+    height: 250px;
+    background-color: var(--main-color);
+  }
+
+  /************ FORMULAIRE D'inscription *************/
+  .inspace {
+    width: 50%;
+    margin-block: 2rem 3rem;
+  }
+
+  /* ***********PHARMACIE EN LIGNE************** */
+
+  .bannieremedicament {
+    padding-bottom: 2rem;
+  }
+
+  .medicatextpub {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .medicasymb {
+    height: 70%;
+    width: 100%;
+    background: url(../IMAGES/armoirepharma.png) center/75% no-repeat;
+  }
+
+  /* ***********PLACES DES MEDICAMENTS************** */
+
+  .marketing {
+    padding-inline: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .marketingtitle {
+    font-size: 1.5rem;
+  }
+
+  .searchbar,
+  .searchbarmed {
+    width: 90%;
+    height: 4.5rem;
+    margin-block: 3rem;
+    padding-inline: 2rem;
+    position: relative;
+  }
+
+  .searchbarmed {
+    width: 90%;
+    padding-inline: 2rem;
+  }
+
+  .searchbarmed .searchbaritems {
+    width: 100%;
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  .rayondemedicament {
+    position: absolute;
+    top: 0;
+    left: 5rem;
+    width: 25%;
+    padding-top: 0;
+    border-radius: 0 0 0.3rem 0.3rem;
+    cursor: pointer;
+  }
+
+  .rayonitems {
+    width: 95%;
+    padding-left: 1rem;
+    padding-bottom: 5rem;
+  }
+  .rayontitle {
+    font-size: 1.2rem;
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .rayonlinks {
+    width: 90%;
+    font-size: 1rem;
+    color: var(--main-color);
+    align-items: baseline;
+    gap: 1rem;
+    margin: 1rem 0.3rem;
+    padding-left: 1rem;
+    color: var(--bg-color);
+  }
+
+  .searchbarmed .searchbaritems #rayonopen {
+    margin-right: 2rem;
+  }
+
+  .searchbarmed .searchbaritems .searchinput {
+    width: 95%;
+  }
+
+  .searchbaritems {
+    width: 100%;
+  }
+
+  #rayonopen {
+    font-size: 3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .searchinput {
+    width: 85%;
+    height: 4rem;
+    align-items: center;
+  }
+  .searchinput input {
+    height: 2.5rem;
+    width: 90%;
+  }
+
+  .searchinput button {
+    height: 2.5rem;
+    width: 10%;
+    cursor: pointer;
+  }
+
+  .searchinput button i {
+    font-size: 1.7rem;
+  }
+
+  .panierfiltre {
+    width: 5%;
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+
+  .panierfiltre i {
+    font-size: 2.2rem;
+  }
+
+  .indication {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .pharmacieplace {
+    grid-template-columns: repeat(3, 31.33%);
+    grid-template-rows: auto;
+    gap: 5% 2.5%;
+    padding-inline: 2%;
+  }
+
+  /* ***********INFOS DU MEDICAMENT POSTE************* */
+
+  .medicamentinfo {
+    flex-direction: row;
+    height: 12rem;
+  }
+
+  .no-scroll {
+    overflow: auto;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .imagedumedicament {
+    width: 35%;
+    height: 99%;
+    margin-inline: 0.3rem;
+  }
+
+  .medicamentdescription {
+    width: 65%;
+    padding-block: 0.3rem;
+    height: 99%;
+    padding-left: 0.2rem;
+  }
+
+  .nomdumedicament {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
+    margin-bottom: 0.5rem;
+  }
+
+  .typedumedicament {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .maladietraites {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .prixdumedicament {
+    padding-left: 0.15rem;
+    width: 40%;
+    height: 1.9rem;
+  }
+
+  .panierachat {
+    height: 2.5rem;
+    width: 80%;
+    font-size: 1rem;
+    margin-inline: auto;
+    cursor: pointer;
+  }
+
+  .panierachat:hover {
+    background-color: var(--second-color);
+    transition: 0.4s ease;
+  }
+
+  .panierachat i {
+    font-size: 1rem;
+  }
+  /* ************ PRESCRIPTION EN LIGNE*********** */
+
+  .ordonnancespace {
+    padding-top: 10rem;
+  }
+
+  .ordonnancetitle {
+    font-size: 2rem;
+    margin-left: 2rem;
+    gap: 0.5rem;
+  }
+
+  .ordonnancinfo {
+    margin-top: 2rem;
+  }
+
+  .ordonnancinfo h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .medicamentprescrit {
+    border: 1px solid #494141a8;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding-block: 1rem;
+    padding-inline: 0.9rem;
+  }
+  .ordonnancespace h3 {
+    font-size: 1.7rem;
+  }
+  .medicamentprescrit span {
+    font-size: 1.7rem;
+  }
+
+  .instructionsup {
+    padding-block: 1rem;
+    margin-top: 1.7rem;
+    padding-inline: 0.5rem;
+    border-left: 5px solid var(--second-color);
+  }
+
+  .instructionsup p {
+    font-size: 1.65rem;
+  }
+
+  /* ***************PANIER D'ACHAT*************** */
+  .panieritems {
+    width: 60%;
+    margin-top: 2rem;
+  }
+  .medicamentchoisi {
+    width: 95%;
+    height: 9rem;
+    padding-inline: 0.5rem;
+    padding-block: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .medicamentchoisi-info {
+    width: 70%;
+    padding-block: 0.5rem 0.5rem;
+  }
+
+  .medicamentchoisi-name {
+    font-size: 1.1rem;
+    margin-block: 0.3rem;
+  }
+
+  .medicamentchoisi-prix {
+    font-size: 1.1rem;
+    margin-block: 0.5rem 1rem;
+  }
+
+  .supprimer {
+    font-size: 1.1rem;
+  }
+
+  .supprimer i {
+    font-size: 1.1rem;
+  }
+
+  .viderpanier {
+    font-size: 1.5rem;
+  }
+
+  .quantite-control {
+    width: 9%;
+    height: 2.5rem;
+    font-size: 1.4rem;
+    align-items: center;
+  }
+
+  .quantite-control button {
+    width: 35%;
+    font-size: 2rem;
+    height: 2rem;
+    border: none;
+  }
+  .total {
+    padding-block: 1.5rem;
+    padding-inline: 0.5rem;
+    gap: 1rem;
+  }
+  .total strong {
+    margin-left: auto;
+    font-size: 1.2rem;
+  }
+
+  .total button,
+  .buttonValidateur {
+    height: 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .favorispace {
+    width: 92%;
+    margin-inline: auto;
+    margin-block: 1rem;
+  }
+
+  /* ***********VALIDATION DE COMMANDES************ */
+
+  .confirmationAchat,
+  .RDVformspace,
+  .reserveformspace,
+  .editprofilspace {
+    width: 60%;
+    margin-block: 4rem;
+  }
+
+  .commandeform,
+  .RDVform,
+  .reserveform,
+  .editprofilform {
+    padding-inline: 1rem;
+    padding-block: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .commandetitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .commandeform input,
+  .commandeform select,
+  .RDVform input,
+  .RDVform select,
+  .reserveform input,
+  .editprofilform input,
+  .editprofilform select {
+    height: 3rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    margin-block: 0.7rem;
+  }
+
+  .buttonValidateur {
+    margin-top: 1rem;
+  }
+
+  /* ************PRISE DE RDV**************** */
+  .RDVformspace {
+    margin-block: 1rem 2rem;
+  }
+  .RDVform label,
+  .reserveform label,
+  .editprofilform label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-block: 0.3rem;
+  }
+
+  .RDVform input,
+  .reserveform input,
+  .editprofilform input,
+  .editprofilform select {
+    margin-block: 0;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .RDVform textarea,
+  .reserveform textarea {
+    width: 100%;
+    height: 5rem;
+    resize: none;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  /* ***************AVIS DES CLIENTS************** */
+
+  .avisdesclients {
+    padding-inline: 0.65rem;
+    padding-block: 2rem;
+  }
+
+  .avistitle {
+    font-size: 1.3rem;
+  }
+
+  .boitesavis {
+    padding: 2.5rem auto;
+  }
+
+  .aviscrollable {
+    width: 90%;
+    gap: 0 1rem;
+    display: flex;
+    padding: 1rem;
+  }
+  .aviscrollable::-webkit-scrollbar {
+    display: none;
+  }
+
+  .boitesavis button {
+    height: 8rem;
+    width: 7%;
+  }
+  .boitesavis button i {
+    font-size: 3rem;
+  }
+  .placeavis {
+    width: 100%;
+    height: 15rem;
+    padding: 1.5rem;
+    flex-shrink: 0;
+    flex: 0 0 49%;
+  }
+  .avisheader {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+
+  .photoduclient {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+  .nomduclient {
+    font-size: 1rem;
+    opacity: 1;
+  }
+  .avisbody {
+    width: 100%;
+  }
+  .notedonne {
+    margin-top: 2rem;
+  }
+
+  .notedonne i {
+    font-size: 1rem;
+    margin-right: 1.5rem;
+  }
+  .datepublication {
+    font-size: 1rem;
+  }
+
+  .commentaireduclient {
+    font-size: 0.7rem;
+    margin-top: 1.5rem;
+  }
+  /* **************CONSULTATION EN LIGNE********* */
+  .medecinetitle {
+    font-size: 1.5rem;
+    margin-block: 2rem 2.5rem;
+  }
+
+  .medecinadvent {
+    margin-left: 5rem;
+  }
+
+  .medecinspace {
+    margin: 0 auto;
+    width: 90%;
+    grid-template-columns: repeat(3, 32%);
+    gap: 0 2%;
+    padding-bottom: 5rem;
+  }
+  .savoirplus {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-right: auto;
+  }
+  .medecinitems {
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+
+  .imagedumedecin {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .nomdumedecin {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .agedumedecin {
+    font-size: 1.3rem;
+  }
+
+  .specialitedumedecin {
+    font-size: 1.4rem;
+  }
+
+  .prisedecontact {
+    width: 98%;
+    gap: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .prisedecontact button {
+    height: 3.5rem;
+    width: 45%;
+    font-size: 1.5rem;
+  }
+  /* ***********SERVICE DE SANTE***************** */
+
+  .servicemedical {
+    width: 100%;
+    height: auto;
+    padding-block: 2rem 3rem;
+  }
+
+  .servicetitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .servicespacem {
+    width: 95%;
+    grid-template-columns: repeat(4, 23.5%);
+    gap: 1.5rem 2%;
+    margin-inline: auto;
+  }
+
+  .iconduservice {
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    font-size: 6rem;
+  }
+
+  .servicetype {
+    font-size: 1.7rem;
+    margin: 0.7rem 0;
+  }
+
+  .servicereservation {
+    height: 3rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+
+  .servicereservation:hover {
+    background-color: var(--main-color);
+    border: 3px solid var(--bg-color);
+    color: var(--bg-color);
+    transition: 0.5s ease-in-out;
+  }
+
+  /* *******PROFIL DE L'UTILISATEUR************ */
+
+  .arriereplan {
+    height: 400px;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .userinfo {
+    top: 200px;
+    width: 40%;
+    left: 5%;
+  }
+
+  .userimage {
+    height: 8rem;
+    width: 8rem;
+    top: -4rem;
+  }
+
+  .userimage i {
+    font-size: 1.3rem;
+    bottom: 0rem;
+    left: 5.5rem;
+  }
+
+  .username {
+    margin-top: 4.5rem;
+    font-size: 1.3rem;
+  }
+
+  .useremail {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .modification {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    width: 80%;
+  }
+
+  .modification a {
+    width: 33%;
+  }
+
+  .modification div {
+    border-radius: 0.6rem;
+  }
+
+  .modification div button {
+    margin-top: 0.7rem;
+  }
+
+  .modification div button i {
+    font-size: 2rem;
+  }
+
+  .modification div p {
+    font-size: 1.1rem;
+    margin-block: 0.5rem;
+  }
+
+  .profil-action {
+    top: 200px;
+    width: 45%;
+    position: absolute;
+    right: 5%;
+    border-radius: 1rem;
+    padding-block: 3rem 1rem;
+    box-shadow: 0 0 0.5rem black;
+  }
+
+  .profil-action h2 {
+    font-size: 1rem;
+    margin-block:1rem 0.3rem;
+  }
+
+  .profil-action a div {
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    padding-inline: 1rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+  }
+
+  .i1 {
+    width: 10%;
+  }
+
+  .i2 {
+    margin-left: auto;
+  }
+
+  .log-out{
+    height:3.5rem;
+    font-size: 1.6rem;
+    width: 40%;
+    margin-top: 9rem;
+  }
+  
+  /*************HISTORIQUES DES RDV************** */
+  .headerRDV {
+    padding: 1rem;
+  }
+
+  .headerRDV h1 {
+    font-size: 1.1rem;
+  }
+
+  .headerRDV i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 2.5rem;
+  }
+
+  .historiqueRDV,
+  .historiqueAchat {
+    padding: 1.5rem 0;
+  }
+
+  .historiqueRDV h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .rdv-a-venir,
+  .rdv-passes,
+  .achat-items {
+    margin-bottom: 2rem;
+  }
+  .rdv-a-venir div,
+  .rdv-passes div,
+  .achat-items div {
+    min-height: 4rem;
+    max-height: 5rem;
+    margin: 2px;
+  }
+  /* ***************BLOG MEDICAL*************** */
+  .blog-title {
+    font-size: 2rem;
+    margin-inline: 2.2rem;
+    margin-bottom: 3rem;
+  }
+  .blog-space {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    width: 95%;
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  .blog-item {
+    box-shadow: 0 0 0.5rem black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .image-illustrative {
+    height: 13rem;
+    width: 100%;
+  }
+
+  .sujet-description {
+    height: auto;
+    padding-inline: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .sujet-sante {
+    font-size: 1.5rem;
+    margin-block: 1rem 1rem;
+  }
+
+  .theme-sante {
+    font-size: 1rem;
+    margin-block: 2rem 0.5rem;
+  }
+
+  .sujet-detail {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    max-height: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .sujet-description a,
+  .sujet-description a i {
+    font-size: 1.4rem;
+  }
+}
