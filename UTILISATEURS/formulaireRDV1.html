@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../STYLES/style.css" />
+    <link rel="stylesheet" href="../fontawesome-free-6.7.2-web/css/all.css" />
+  </head>
+  <body class="rdv-body">
+    <header class="headerRDV">
+      <a href="medecin.html"
+        ><i class="fas fa-arrow-left"></i
+      ></a>
+      <h1>Prise de Rendez-vous</h1>
+    </header>
+    <section class="RDVformspace">
+      <form action="" class="RDVform">
+        <h2 class="commandetitle">Rendez-vous médical</h2> <label for="name">Nom complet<input type="text" id="name" placeholder="Nom complet" required></label>
+
+        <label for="email">Adresse email<input type="email" id="email" placeholder="Adresse email" required></label>
+
+        <label for="phone">Numéro de téléphone<input type="tel" id="phone" placeholder="Entrer votre numero de téléphone" required></label>
+
+        <label for="local">Votre ville<input type="text" id="local" placeholder="Exemple : Abidjan" required></label>
+
+        <label for="quartier">Votre quartier<input type="text" id="quartier" placeholder="Exemple : Yopougon siporex ..." required></label>
+
+        <label for="daterdv">Date du Rendez-vous<input type="date" id="daterdv" required></label>
+
+        <label for="heurerdv">Heure souhaitée<input type="time" id="heurerdv" required></label>
+       <label for="paiement">Moyens de paiement<select name="paiement" id="paiement" required>
+        <option value="selectionner"selected>selectionner</option>
+        <option value="mobilemoney">MTN money</option>
+        <option value="wave">Wave</option>
+        <option value="carte bancaire">Orange money</option>
+        <option value="moovmoney">Moov money</option>
+        <option value="carte bancaire">Carte bancaire</option>
+       </select></label>
+       <label for="motif">Motif de consultation<textarea name="motif" id="motif" placeholder="ex : Douleurs lombaires,fièvre ..." required></textarea ></label>
+       <button class="buttonValidateur">Envoyer la demande</button>
+      </form>
+    </section>
+    <script src="/JAVASCRIPTS/dom.js"></script>
+  </body>
+</html>
