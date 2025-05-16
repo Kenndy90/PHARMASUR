@@ -2,48 +2,28 @@ const openmenu = document.querySelector(".iconbar");
 const closemenu = document.querySelector("#sideclose");
 const Sidebar = document.querySelector(".sidebar");
 const body = document.querySelector("body");
-
-function sidebartoggle() {
-  openmenu.addEventListener("click", () => {
-    if ((Sidebar.style.display = "none")) {
-      Sidebar.style.display = "flex";
-      body.classList.add("no-scroll");
-    }
-  });
-  closemenu.addEventListener("click", () => {
-    if ((Sidebar.style.display = "flex")) {
-      Sidebar.style.display = "none";
-      body.classList.remove("no-scroll");
-    }
-  });
-}
-
-sidebartoggle();
-
 const openrayon = document.getElementById("rayonopen");
 const Rayon = document.querySelector(".rayondemedicament");
 const closerayon = document.getElementById("closerayon");
-const rayonLink = document.querySelectorAll(".rayonlinks");
-function rayontoggle() {
-  openrayon.addEventListener("click", () => {
-    if ((Rayon.style.display = "none")) {
-      Rayon.style.display = "flex";
+
+function openMenu(menu,open,close){
+   open.addEventListener("click", () => {
+    if ((menu.style.display = "none")) {
+      menu.style.display = "flex";
       body.classList.add("no-scroll");
-      closerayon.style.display = "flex";
-      openrayon.style.display = "none";
     }
   });
-  closerayon.addEventListener("click", () => {
-    if ((Rayon.style.display = "flex")) {
-      Rayon.style.display = "none";
+  close.addEventListener("click", () => {
+    if ((menu.style.display = "flex")) {
+      menu.style.display = "none";
       body.classList.remove("no-scroll");
-      openrayon.style.display = "flex";
-      closerayon.style.display = "none";
     }
   });
 }
 
-rayontoggle();
+openMenu(Sidebar,openmenu,closemenu)
+openMenu(Rayon,openrayon,closerayon)
+
 
 function fermerRayon() {
   Rayon.style.display = "none";
@@ -54,18 +34,6 @@ function fermerRayon() {
 
 fermerRayon();
 
-// ************ORDIMENU**********************
-let openOrdimenu = document.getElementById("ordimenu");
-let ordiMenu = document.querySelector(".ordilinks");
-console.log(ordiMenu)
-openOrdimenu.style.color= "red";
-function menuDordi() {
-  openmenu.addEventListener("click", () => {
-    if ((ordiMenu.style.display = "none")) {
-      ordiMenu.style.display = "flex";
-    }
-  });
-}  
 
 // ***********SCROLL ANIMATION*****************
 let indexcompteur = 0;
@@ -108,27 +76,3 @@ function filtrer(type) {
 
 filtrer("tous");
 
-// **************NAVIGATION PAR ONGLETS***************
-
-function openOnglet(evt, tabname) {
-  const contents = document.querySelectorAll(".content");
-  const tabs = document.querySelectorAll(".tab");
-  for (let i = 0; i < contents.length; i++) {
-    contents[i].style.display = "none";
-  }
-  for (let i = 0; i < tabs.length; i++) {
-    tabs[i].className = tabs[i].className.replace("active");
-  }
-  document.getElementById(tabname).style.display = "flex";
-  evt.currentTarget.className += " active";
-}
-
-// *************VALIDATION ACHATS *****************
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const commandeButton = document.querySelector(".commandebutton");
-//   const confirmationAchat = document.querySelector(".confirmationAchat");
-//   commandeButton.addEventListener("click", function () {
-//     confirmationAchat.style.display = "block";
-//   });
-// });
